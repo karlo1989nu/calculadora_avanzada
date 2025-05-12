@@ -33,11 +33,14 @@ function RegistroUsuario() {
     if (!validarFormulario()) return;
 
     try {
-      const response = await axios.post("/usuarios/registro", {
-        nombre,
-        email,
-        saldo: parseFloat(saldo),
-      });
+      const response = await axios.post(
+        "http://127.0.0.1:5000/usuarios/registro",
+        {
+          nombre,
+          email,
+          saldo: parseFloat(saldo),
+        }
+      );
       setMensaje({ tipo: "exito", texto: response.data.mensaje });
       setNombre("");
       setEmail("");

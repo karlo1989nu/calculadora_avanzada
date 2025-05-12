@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Historial() {
-  const [historial, setHistorial] = useState([]); // Asegúrate de inicializar como un array
+  const [historial, setHistorial] = useState([]); // Inicializa como un array vacío
   const [operacionFiltro, setOperacionFiltro] = useState("");
   const [pagina, setPagina] = useState(1);
   const [totalPaginas, setTotalPaginas] = useState(1);
@@ -11,7 +11,7 @@ function Historial() {
 
   const cargarHistorial = async () => {
     try {
-      const response = await axios.get("/historial", {
+      const response = await axios.get("http://127.0.0.1:5000/historial", {
         params: operacionFiltro ? { operacion: operacionFiltro } : {},
       });
       const data = Array.isArray(response.data) ? response.data : []; // Asegúrate de que sea un array

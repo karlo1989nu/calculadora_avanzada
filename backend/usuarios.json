@@ -1,0 +1,14 @@
+[
+    {
+        "id": "11d5020b-77e3-4a04-ba48-131b07b166ee",
+        "nombre": "anda la osa",
+        "email": "anda@laosa.com",
+        "saldo": 3
+    },
+    {
+        "id": "102dc008-13e8-4d7d-a6ec-68103eba7e72",
+        "nombre": "anda",
+        "email": "anda1@laosa.com",
+        "saldo": 2
+    }
+]

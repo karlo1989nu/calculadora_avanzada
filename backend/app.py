@@ -4,9 +4,12 @@ from usuarios import registrar_usuario, cargar_usuarios
 import traceback
 from flask import Flask
 from flask_cors import CORS
+from flask import request, jsonify
+import json
 
 app = Flask(__name__)
-CORS(app)  # Habilita CORS para todas las rutas
+app.config['DEBUG'] = True
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})  # Configuración CORS
 
 # Resto del código...
 
@@ -64,8 +67,9 @@ def calcular():
 @app.route("/historial", methods=["GET"])
 def historial():
     """
+    ""
     Devuelve las últimas 10 operaciones, con opción de filtrar por tipo de operación.
-    """
+    ""
     operacion_filtro = request.args.get("operacion")
     historial = cargar_usuarios()  # Reutilizando cargar_usuarios para cargar historial
 
@@ -73,7 +77,18 @@ def historial():
         historial = [h for h in historial if h["operacion"] == operacion_filtro]
 
     historial = sorted(historial, key=lambda x: x["timestamp"], reverse=True)[:10]
-    return jsonify(historial)
+    return jsonify(historial)*/
+    """
+
+ 
+    try:
+        with open("historial.json", "r", encoding="utf-8") as file:
+            data = json.load(file)
+        print("Historial cargado correctamente:", data)  # Depuración
+        return jsonify(data), 200
+    except Exception as e:
+        print("Error al cargar el historial:", str(e))  # Depuración
+        return jsonify({"error": "Error al cargar el historial", "detalle": str(e)}), 500
 
 @app.route("/usuarios/registro", methods=["POST"])
 def registrar_usuario_endpoint():

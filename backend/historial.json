@@ -1,0 +1,42 @@
+[
+    {
+        "id": "b72c91c3-1d96-408b-b5af-5c8b978b4bb8",
+        "timestamp": "2025-05-12T14:55:55.705180Z",
+        "operacion": "sumar",
+        "parametros": {
+            "a": 7,
+            "b": 5
+        },
+        "resultado": 12
+    },
+    {
+        "id": "72a0c648-76b9-4876-8dc6-7f51a7ebb58f",
+        "timestamp": "2025-05-12T15:06:12.878301Z",
+        "operacion": "sumar",
+        "parametros": {
+            "a": 34,
+            "b": 87
+        },
+        "resultado": 121
+    },
+    {
+        "id": "c5929a44-f9ed-4112-8cd3-3ab0981f1d27",
+        "timestamp": "2025-05-12T15:12:04.356415Z",
+        "operacion": "multiplicar",
+        "parametros": {
+            "a": 765,
+            "b": 897759
+        },
+        "resultado": 686785635
+    },
+    {
+        "id": "f6f4cb77-ba48-4508-9936-6742ac537e55",
+        "timestamp": "2025-05-12T15:49:48.081669Z",
+        "operacion": "sumar",
+        "parametros": {
+            "a": 87,
+            "b": 9
+        },
+        "resultado": 96
+    }
+]
