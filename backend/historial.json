@@ -38,5 +38,15 @@
             "b": 9
         },
         "resultado": 96
+    },
+    {
+        "id": "01c51e9e-4569-42dc-b77b-a2952515275b",
+        "timestamp": "2025-05-12T16:09:04.157270Z",
+        "operacion": "multiplicar",
+        "parametros": {
+            "a": 6,
+            "b": 7
+        },
+        "resultado": 42
     }
 ]
